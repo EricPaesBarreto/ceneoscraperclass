@@ -13,15 +13,15 @@ productID: 161123001
 ## Structure of a single opinion in Ceneo.pl
 |Component|Variable|Selector|
 |----------|----------|----------|
-|opinion|opinion||
-|opinion ID|opinion_id|div.user-post user-post__card js_product-review[data-entry-id]|
+|opinion|opinion|div.js_product-review:not(user-post--highlight)|
+|opinion ID|opinion_id|["data-entry-id"]|
 |opinion’s author|author|span.user-post__author-name|
-|author’s recommendation|recommendation|span.user-post__author-recomendation > em.recommended|
+|author’s recommendation|recommendation|span.user-post__author-recomendation > em|
 |score expressed in number of stars|score|span.user-post__score-count|
 |opinion’s content|content|div.user-post__text|
-|list of product advantages|pros|div.review-feature__section > div.review__section-title > div.review-feature__item review-feature__item--positive|
-|list of product disadvantages|cons|review-feature__section > div.review__section-title > div.review-feature__item review-feature__item--negative|
-|how many users think that opinion was helpful|thumbs_up|div.js_product-review-usefulness vote > div.vote-yes js_product-review-vote js_vote-yes[data-total-vote]|
-|how many users think that opinion was unhelpful|thumbs_down|div.js_product-review-usefulness vote > div.vote-no js_product-review-vote js_vote-no[data-total-vote]|
-|publishing date|date_published||
-|purchase date|date_purchased||
+|list of product advantages|pros|div.review-feature__section > review-feature__item--positive|
+|list of product disadvantages|cons|review-feature__section > review-feature__item--negative|
+|how many users think that opinion was helpful|thumbs_up|button.vote-yes["data-total-vote"]|
+|how many users think that opinion was unhelpful|thumbs_down|button.vote-no["data-total-vote"]|
+|publishing date|date_published|span.user-post__published > time:nth-child(1)["datetime"]|
+|purchase date|date_purchased|span.user-post__published > time:nth-child(2)["datetime"]|
