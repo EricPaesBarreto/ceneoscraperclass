@@ -178,3 +178,6 @@ cookie.json
 
 # virtual environment
 venv
+
+# opinions stored in json
+/opinions
