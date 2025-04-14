@@ -20,7 +20,7 @@ productID: 161123001
 |score expressed in number of stars|score|span.user-post__score-count|
 |opinion’s content|content|div.user-post__text|
 |list of product advantages|pros|div.review-feature__section > review-feature__item--positive|
-|list of product disadvantages|cons|review-feature__section > review-feature__item--negative|
+|list of product disadvantages|cons|div.review-feature__section > review-feature__item--negative|
 |how many users think that opinion was helpful|thumbs_up|button.vote-yes["data-total-vote"]|
 |how many users think that opinion was unhelpful|thumbs_down|button.vote-no["data-total-vote"]|
 |publishing date|date_published|span.user-post__published > time:nth-child(1)["datetime"]|
