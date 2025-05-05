@@ -181,3 +181,7 @@ venv
 
 # opinions stored in json
 /opinions
+
+# images
+/pie_charts
+/bar_charts
